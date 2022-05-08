@@ -1,0 +1,26 @@
+{
+    "files.associations": {
+        "app_chargestore.h": "c",
+        "key_event_deal.h": "c",
+        "app_config.h": "c",
+        "app_power_manage.h": "c",
+        "app_task.h": "c",
+        "ble_user.h": "c",
+        "ui_api.h": "c",
+        "sys_time.h": "c",
+        "rtc_ui.h": "c",
+        "alarm.h": "c",
+        "typedef.h": "c",
+        "board_ac695x_smartbox.h": "c",
+        "le_trans_data.h": "c",
+        "compare": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "xmemory": "c",
+        "xtr1common": "c",
+        "xutility": "c",
+        "syscfg_id.h": "c",
+        "xiaoyun_agreement.h": "c"
+    }
+}

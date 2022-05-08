@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "board_ac695x_smartbox.h": "c",
+        "xz_ble_port.h": "c"
+    }
+}
