@@ -1173,15 +1173,6 @@ int rtc_key_event_opr(struct sys_event *event)
             break;
         case KEY_RTC_0_SHORT:
             r_printf("KEY_RTC_0_SHORT\n");
-            static u8 o_data[] = {0x18, 0x01, 0x00, 0x01, 0x00};
-            
-            extern unsigned char  xz_sent_encode_data(unsigned char *data,unsigned char len);
-            xz_sent_encode_data(o_data,sizeof(o_data));
-            for(int i=0;i<sizeof(o_data);i++){
-                printf("data[%d]:%d\t",i,o_data[i]);
-            }  
-            printf("\n"); 
-            break;
             if((key_rtc_8_press_falg == FALSE)&&(key_rtc_7_press_falg == FALSE)&&(key_rtc_6_press_falg == FALSE)){
                 if(app_check_curr_task(APP_FM_TASK)){
                     app_task_put_key_msg(KEY_FM_SCAN_ALL_UP, 0);

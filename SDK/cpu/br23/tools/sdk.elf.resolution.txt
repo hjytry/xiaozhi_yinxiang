@@ -3492,7 +3492,6 @@ obj/Release/apps/soundbox/task_manager/rtc/rtc.o
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,cpu_assert_debug,l
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,dev_open,l
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,log_print,l
--r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,xz_sent_encode_data,l
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,app_check_curr_task,l
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,app_task_put_key_msg,l
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,rtc_task_start,pl
@@ -3516,7 +3515,6 @@ obj/Release/apps/soundbox/task_manager/rtc/rtc.o
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,ui_close_main_menu,l
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,dev_close,l
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,free,l
--r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,putchar,l
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,alm_string,pl
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,alm_select,pl
 -r=obj/Release/apps/soundbox/task_manager/rtc/rtc.o,rtc_ring_timer,pl
