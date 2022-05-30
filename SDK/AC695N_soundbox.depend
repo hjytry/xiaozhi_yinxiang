@@ -93235,7 +93235,7 @@
 
 1630373473 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\include_lib\driver\cpu\br23\asm\adc_api.h
 
-1648215974 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\soundbox\board\br23\board_config.h
+1653108571 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\soundbox\board\br23\board_config.h
 	"board_ac6954a_demo/board_ac6954a_demo_cfg.h"
 	"board_ac695x_demo/board_ac695x_demo_cfg.h"
 	"board_ac6952e_lighter/board_ac6952e_lighter_cfg.h"
@@ -93284,14 +93284,14 @@
 1607678650 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\soundbox\board\br23\board_ac695x_soundcard\board_ac695x_soundcard.h
 	"usb_std_class_def.h"
 
-1651485374 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\soundbox\board\br23\board_ac695x_smartbox\board_ac695x_smartbox.h
+1653218068 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\soundbox\board\br23\board_ac695x_smartbox\board_ac695x_smartbox.h
 	"usb_std_class_def.h"
 
 1607678650 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\soundbox\board\br23\board_ac695x_lcd\board_ac695x_lcd_cfg.h
 	"usb_std_class_def.h"
 	"app_config.h"
 
-1651485164 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\soundbox\include\app_config.h
+1653218081 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\soundbox\include\app_config.h
 	"asm/clock_define.h"
 	"board_config.h"
 	"btcontroller_mode.h"
@@ -95077,7 +95077,7 @@
 	<stdlib.h>
 	<stddef.h>
 
-1649051214 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\xiaozhi\sdk\xz_ble_app_demo.h
+1653193827 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\xiaozhi\sdk\xz_ble_app_demo.h
 
 1648310595 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\xiaozhi\sdk\lib\xiaozhi_lib.h
 
@@ -98579,7 +98579,7 @@
 	"generic/log.h"
 	"app_config.h"
 
-1651483719 source:c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\xiaozhi\sdk\lib\xiaozhi_lib.c
+1653216370 source:c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\xiaozhi\sdk\lib\xiaozhi_lib.c
 	"system/includes.h"
 
 1648303596 source:c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\xiaozhi\sdk\src\xz_ble_utils.c
@@ -98590,7 +98590,7 @@
 1648287687 c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\xiaozhi\sdk\include\xz_ble_utils.h
 	"xz_ble_stdlib.h"
 
-1649055380 source:c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\xiaozhi\sdk\xz_ble_app_demo.c
+1653194009 source:c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\xiaozhi\sdk\xz_ble_app_demo.c
 	"system/includes.h"
 	"log.h"
 	"xz_ble_type.h"
@@ -99476,4 +99476,26 @@
 	"sys_time.h"
 	"key_event_deal.h"
 	"rtc/alarm.h"
+
+1651485734 source:c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\soundbox\log_config\lib_system_config.c
+	"app_config.h"
+	"system/includes.h"
+
+1653102811 source:c:\users\18097\desktop\xiaozhi\git\xiaozhi_yinxiang\sdk\apps\soundbox\task_manager\rtc\rtc.c
+	"app_config.h"
+	"key_event_deal.h"
+	"system/includes.h"
+	"tone_player.h"
+	"app_task.h"
+	"tone_player.h"
+	"media/includes.h"
+	"system/sys_time.h"
+	"ui/ui_api.h"
+	"rtc/alarm.h"
+	"rtc/rtc_ui.h"
+	"clock_cfg.h"
+	"ui/ui_style.h"
+	"ui_manage.h"
+	"syscfg_id.h"
+	"debug.h"
 

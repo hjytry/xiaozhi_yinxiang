@@ -63,8 +63,8 @@ typedef enum {
     DPID_MAX,
     DPID_SWITCH,                //开关(新界面不用)
     DPID_CHANGE_KEY = 0XF0,     //修改密钥
-    DPID_BOUND_STATUS = 0XFD,   //绑定状态
-    DPID_BOUND = 0XFE,          //绑定
+    DPID_BOUND = 0XF1,          //绑定
+    DPID_BOUND_STATUS = 0XF2,   //绑定状态
     DPID_RET_VAL = 0XFF,        //返回值
 
 

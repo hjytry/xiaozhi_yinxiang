@@ -242,8 +242,8 @@ struct dp_data_income_do dp_data_response_tb[] = {
     {DPID_SYNC_TIMER, dp_sync_timer_response},
 
     {DPID_CHANGE_KEY, dp_change_key_response},
-    {DPID_BOUND_STATUS, dp_bound_status_response},
     {DPID_BOUND, dp_bound_response},
+    {DPID_BOUND_STATUS, dp_bound_status_response},
 
 };
 

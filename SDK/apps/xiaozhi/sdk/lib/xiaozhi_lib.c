@@ -148,6 +148,8 @@ void  make_xiao_zhi_uuid(void)
     unsigned char temp_uuid[16];
     unsigned char temp_rand[3];
     unsigned char temp;
+    unsigned char sum_check = 0;
+    unsigned int sum_num = 0;
 
 
     // printf("make_xiao_zhi_uuid o data:\n");
@@ -157,7 +159,7 @@ void  make_xiao_zhi_uuid(void)
         // memcpy(temp_uuid, xz_get_uuid(), 16);
         xz_get_random_number(temp_rand,3);
         memcpy(&temp_buf[2],temp_uuid,5);
-        temp_buf[7] = temp_rand[0];
+        temp_buf[7] = 0;
         memcpy(&temp_buf[8],&temp_uuid[4],7);
         temp_buf[15] = temp_rand[1];
         memcpy(&temp_buf[16],&temp_uuid[11],4);
@@ -167,6 +169,12 @@ void  make_xiao_zhi_uuid(void)
         xz_get_edr_mac(&temp_buf[23],6);
         //temp_buf[23] = temp_rand[2];
 
+        for(int i=0;i<sizeof(temp_buf);i++){
+            sum_check += temp_buf[i];
+            sum_num += temp_buf[i];
+        }
+        temp_buf[7]= sum_check;
+        printf("sum_check:%d,sum:%d\n",sum_check,sum_num);
 
         printf("make_xiao_zhi_uuid o data:\n");
         put_buf(temp_buf,sizeof(temp_buf));
@@ -226,8 +234,8 @@ static inline unsigned char make_eir_packet_val(u8 *buf, u16 offset, u8 data_typ
     return val_size + 2;
 }
 
-static char *xiao_zhi_name = "XZ";
-static char *xiao_zhi_pid = "JFYX0000";
+static char *xiao_zhi_name = "XZJFYX0000";
+static char *xiao_zhi_pid = "CLOCK";
 
 unsigned char xz_ble_gap_advertising_adv_data_update(unsigned char *p_ad_data)
 {
