@@ -299,6 +299,11 @@ static int xz_cbuf_read(u8 *buf, u32 *len)
 
 extern void (*xiao_zhi_event_callback)(void *priv);
 
+
+#define DATA_HAED       4
+
+extern int16_t xiao_zhi_send_ack(DP_ID dp_id,uint8_t ack_value);
+
 //设备事件响应demo
 static void xiao_zhi_event_handler(struct sys_event *e)
 {
@@ -316,6 +321,10 @@ static void xiao_zhi_event_handler(struct sys_event *e)
     xz_data.dp_type = receiced_buf[1];
     xz_data.dp_len = (receiced_buf[2]<<8) | receiced_buf[3];
     // xz_data.dp_data = &receiced_buf[4];
+    if(rlen != (xz_data.dp_len + DATA_HAED)){
+        xiao_zhi_send_ack(DPID_RET_VAL,4);
+        return;
+    }
     memcpy(xz_data.dp_data,&receiced_buf[4],xz_data.dp_len);
     // XZ_BLE_PRINTF("id:%d,type:%d,len:%d,data:%d\n",xz_data.dp_id,xz_data->dp_type,xz_data->dp_len,xz_data->dp_data[0]);
     XZ_BLE_PRINTF("id:%d,type:%d,len:%d,data:%d\n", xz_data.dp_id,xz_data.dp_type,xz_data.dp_len,xz_data.dp_data[0]);

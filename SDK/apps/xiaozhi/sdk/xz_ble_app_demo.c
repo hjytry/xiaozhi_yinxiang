@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: HJY
  * @Date: 2022-03-24 23:08:17
- * @LastEditTime: 2022-03-26 19:31:41
+ * @LastEditTime: 2022-07-11 13:53:10
  * @LastEditors: HJY
  */
 #include "system/includes.h"
@@ -115,6 +115,7 @@ static _xz_alarm_data alarm_data;
 #define cmd_alarm_add(type,time)            app_alarm_add(type,time)//do { } while(0)//后面这个函数由客户自己自定义
 #define cmd_alarm_del_all()                 app_alarm_del_all()//后面这个函数由客户自己自定义
 #define cmd_bluetooth_sync_time(time)       bluetooth_sync_time(time)//do { } while(0)//后面这个函数由客户自己自定义
+#define cmd_alarm_add_by_index(index,type,time)            app_alarm_add_by_index(index,type,time)//do { } while(0)//后面这个函数由客户自己自定义
 
 uint16_t xz_timer_data_2_jl_struct(uint8_t *data, uint16_t len)
 {
@@ -149,7 +150,14 @@ uint16_t dp_alarm_add_response(uint8_t *data, uint16_t len)
     uint8_t alarm_index = xz_ble_ascii_to_int(&data[0],1);
     uint8_t alarm_type = xz_ble_ascii_to_int(&data[1],1);
     xz_timer_data_2_jl_struct(&data[2],len-2);
-    cmd_alarm_add(alarm_type,&rtc_time_data);
+    // cmd_alarm_add(alarm_type,&rtc_time_data);
+    printf("hjy alarm_index:%d\n",alarm_index);
+    if((1 == alarm_index) || (2 == alarm_index)){
+        cmd_alarm_add_by_index(alarm_index,alarm_type,&rtc_time_data);
+
+    }else{
+        cmd_alarm_add(alarm_type,&rtc_time_data);
+    }
     return ret;
 }
 

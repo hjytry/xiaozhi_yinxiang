@@ -67,7 +67,7 @@ u8 *syscfg_ptr_read(u16 item_id, u16 *len);
 //=================================================================================//
 //                             用户自定义配置项[1 ~ 49]                            //
 //=================================================================================//
-#define 	CFG_USER_DEFINE_BEGIN		1#
+#define 	CFG_USER_DEFINE_BEGIN		1
 #define     CFG_USER_XZ_INFO_AUTH       2
 #define     CFG_USER_XZ_INFO_AUTH_BK    3
 #define     CFG_USER_XZ_INFO_SYS        4

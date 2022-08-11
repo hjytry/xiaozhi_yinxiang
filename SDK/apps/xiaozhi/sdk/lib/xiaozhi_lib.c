@@ -235,7 +235,7 @@ static inline unsigned char make_eir_packet_val(u8 *buf, u16 offset, u8 data_typ
 }
 
 static char *xiao_zhi_name = "XZJFYX0000";
-static char *xiao_zhi_pid = "CLOCK";
+static char *xiao_zhi_pid = "CLOC K";
 
 unsigned char xz_ble_gap_advertising_adv_data_update(unsigned char *p_ad_data)
 {

@@ -3390,6 +3390,7 @@ obj/Release/apps/soundbox/task_manager/rtc/alarm_api.o
 -r=obj/Release/apps/soundbox/task_manager/rtc/alarm_api.o,app_alarm_add,pl
 -r=obj/Release/apps/soundbox/task_manager/rtc/alarm_api.o,syscfg_write,l
 -r=obj/Release/apps/soundbox/task_manager/rtc/alarm_api.o,user_display_rtc_mode,l
+-r=obj/Release/apps/soundbox/task_manager/rtc/alarm_api.o,app_alarm_add_by_index,pl
 -r=obj/Release/apps/soundbox/task_manager/rtc/alarm_api.o,alarm_active_flag_set,pl
 -r=obj/Release/apps/soundbox/task_manager/rtc/alarm_api.o,alarm_active_flag_get,pl
 -r=obj/Release/apps/soundbox/task_manager/rtc/alarm_api.o,get_alarm_vm_data,pl
@@ -3837,6 +3838,7 @@ obj/Release/apps/xiaozhi/sdk/xz_ble_app_demo.o
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_app_demo.o,xz_ble_ascii_to_int,l
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_app_demo.o,put_buf,l
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_app_demo.o,dp_alarm_add_response,pl
+-r=obj/Release/apps/xiaozhi/sdk/xz_ble_app_demo.o,app_alarm_add_by_index,l
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_app_demo.o,app_alarm_add,l
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_app_demo.o,dp_alarm_del_response,pl
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_app_demo.o,app_alarm_del,l
@@ -3906,6 +3908,7 @@ obj/Release/apps/xiaozhi/sdk/xz_ble_port_AC695N.o
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_port_AC695N.o,local_irq_enable,l
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_port_AC695N.o,log_print,l
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_port_AC695N.o,cbuf_get_data_size,l
+-r=obj/Release/apps/xiaozhi/sdk/xz_ble_port_AC695N.o,xiao_zhi_send_ack,l
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_port_AC695N.o,cbuf_read,l
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_port_AC695N.o,puts,l
 -r=obj/Release/apps/xiaozhi/sdk/xz_ble_port_AC695N.o,xz_cbuft,pl
@@ -5234,6 +5237,7 @@ obj/Release/cpu/br23/setup.o
 -r=obj/Release/cpu/br23/setup.o,app_load_common_code,plx
 -r=obj/Release/cpu/br23/setup.o,setup_arch,pl
 -r=obj/Release/cpu/br23/setup.o,memory_init,l
+-r=obj/Release/cpu/br23/setup.o,wdt_init,l
 -r=obj/Release/cpu/br23/setup.o,clk_init_osc_ldos,l
 -r=obj/Release/cpu/br23/setup.o,clk_init_osc_cap,l
 -r=obj/Release/cpu/br23/setup.o,clk_voltage_init,l

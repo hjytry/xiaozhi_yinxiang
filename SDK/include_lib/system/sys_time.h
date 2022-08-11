@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: HJY
+ * @Date: 2022-05-08 12:12:28
+ * @LastEditTime: 2022-07-11 09:36:30
+ * @LastEditors: HJY
+ */
 #ifndef SYS_TIME_H
 #define SYS_TIME_H
 
@@ -12,6 +19,7 @@ struct sys_time {
     u8 hour;
     u8 min;
     u8 sec;
+    u16 crc;
 };
 
 #if 0

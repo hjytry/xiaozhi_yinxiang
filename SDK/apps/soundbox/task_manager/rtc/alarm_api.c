@@ -1013,6 +1013,36 @@ void app_alarm_add(u8 type,struct sys_time *alarm_time)
     r_printf("time.time %d %d %d %d %d %d\n",alarm.time.year,alarm.time.month,alarm.time.day,alarm.time.hour,alarm.time.min,alarm.time.sec);
 }
 
+void app_alarm_add_by_index(u8 index,u8 type,struct sys_time *alarm_time)
+{
+    r_printf("app_alarm_add time %d %d %d %d %d %d\n",alarm_time->year,alarm_time->month,alarm_time->day,alarm_time->hour,alarm_time->min,alarm_time->sec);
+    T_ALARM alarm = {0};
+    u8 alarm_writer_index = 0;
+    int alarm2_time = 0;
+    int alarm1_time = 0;
+    u8 push_index = 0;
+
+    alarm_writer_index = index;
+
+    syscfg_write(CFG_USER_PUSH_ALARM_ORDER,&alarm_writer_index,1);
+
+    app_alarm_del(alarm_writer_index);
+    alarm.sw = 1;
+    alarm.index = alarm_writer_index;
+    alarm.mode  = type;
+    // memcpy(&alarm.time,time,sizeof(time));
+    alarm.time.year         = alarm_time->year;
+    alarm.time.month        = alarm_time->month;
+    alarm.time.day          = alarm_time->day;
+    alarm.time.hour         = alarm_time->hour;
+    alarm.time.min          = alarm_time->min;
+    alarm.time.sec          = alarm_time->sec;
+    user_alarm_add(&alarm, alarm_writer_index);
+    extern void user_display_rtc_mode(u8 cmd);
+    user_display_rtc_mode(alarm_writer_index);
+    r_printf("time.time %d %d %d %d %d %d\n",alarm.time.year,alarm.time.month,alarm.time.day,alarm.time.hour,alarm.time.min,alarm.time.sec);
+}
+
 void alarm_active_flag_set(u8 flag)
 {
     g_alarm_active_flag = flag;
